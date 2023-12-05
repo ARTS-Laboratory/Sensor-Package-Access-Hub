@@ -10,4 +10,9 @@
 * Add a ground plane
 * Different footprint for Teensy
 
+## V0.4.1
+* Adjusted hole size
+* Fixed lettering
+* Added through holes for ground plane
+* Extended Board
 
