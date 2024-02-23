@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Arts")(type "KiCad")(uri "${KIPRJMOD}/Pretty_Files/Arts.pretty")(options "")(descr ""))
+  (lib (name "Stuff")(type "KiCad")(uri "${KIPRJMOD}/Pretty_Files/Stuff.pretty")(options "")(descr ""))
+)

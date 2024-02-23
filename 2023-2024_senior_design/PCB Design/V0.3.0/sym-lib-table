@@ -1,0 +1,7 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Vibration_Sensor-cache")(type "Legacy")(uri "C:/Users/peter/Downloads/Vibration_Sensor-cache.lib")(options "")(descr ""))
+  (lib (name "Vibration_Sensor-rescue")(type "Legacy")(uri "C:/Users/peter/Downloads/Vibration_Sensor-rescue.lib")(options "")(descr ""))
+  (lib (name "Charleslabs_Parts")(type "Legacy")(uri "C:/Users/peter/Downloads/Charleslabs_Parts.lib")(options "")(descr ""))
+  (lib (name "nRF24L01+")(type "Legacy")(uri "C:/Users/peter/Downloads/nRF24L01+.lib")(options "")(descr ""))
+)
