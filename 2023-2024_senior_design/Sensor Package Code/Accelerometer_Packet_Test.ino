@@ -13,8 +13,10 @@ const int dataPoints = 1000;
 float buffer;
 
 struct Packet {
-  byte data[20]; // Adjust the size according to your data size
+  String accel; // Adjust the size according to your data size
 };
+
+Packet packet;
 
 void setup() {
   // put your setup code here, to run once:
@@ -83,74 +85,30 @@ void loop() {
   //   sendDataPacket(packet);
   // }
 
-  Packet packet;
-  int dataIndex = 0;
-  String line;
-
   dataFile.seek(0);
-
-  while (true) {
-    char c = dataFile.read();
-
-    // Check for end of file
-    if (c == -1) {
-      break; // Exit the loop if end of file is reached
-    }
-
-    // Check if the character is a newline
-    if (c == '\n') {
-      // Process the line
-      processLine(line, packet, dataIndex);
-
-      // Reset line for the next line of data
-      line = "";
-    } else {
-      // Append character to the current line
-      line += c;
-    }
+  for (int i = 0; i < dataPoints; i++) {
+    packet.accel = readAccelSensorVoltage();
+    printSensorData(packet);
   }
 
   // If there's remaining data in the packet, print it
-  if (dataIndex > 0) {
-    sendDataPacket(packet);
-  }
 
   dataFile.close();
 
   Serial.println("Done!");
   int i=1;
-  while (i=1) {
+  while (i = 1) { 
     delay(100);
   }
 }
 
-void processLine(String line, Packet& packet, int& dataIndex) {
-  // Split the line into values
-  char* token = strtok(const_cast<char*>(line.c_str()), ",");
-  int index = 0;
-
-  // Process each token
-  while (token != NULL && index < 20) {
-    // Convert token to double and store it in the packet
-    packet.data[dataIndex++] = atof(token);
-
-    // Get the next token
-    token = strtok(NULL, ",");
-    index++;
-  }
-
-  // If the packet is full, print its data
-  if (dataIndex >= 20) {
-    sendDataPacket(packet);
-    dataIndex = 0;
-  }
+String readAccelSensorVoltage() {
+  String buffer = dataFile.read();
+  return buffer;
 }
 
-void sendDataPacket(Packet packet) {
-  Serial.println("Packet data:");
-  for (int i = 0; i < sizeof(packet.data); i++) {
-    Serial.print(packet.data[i]);
-    Serial.print(" ");
-  }
-  Serial.println();
+void printSensorData(const Packet& packet) {
+  
+  Serial.println(packet.accel); // Display float with 2 decimal places
+  
 }
