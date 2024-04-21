@@ -1,3 +1,5 @@
+#Team Smoaking Hot Software & Documentation
+
 # Sensor Package & Waystation Contents
 
 * Contains all software components and schematics used and tested in project
