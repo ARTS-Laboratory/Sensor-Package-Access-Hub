@@ -20,3 +20,7 @@
 
 * Adjusted hole size for MPU6050
 * Added surface mounts for linear regulators
+
+## V0.5.0
+
+* New version in March 2025 for future changes. 
