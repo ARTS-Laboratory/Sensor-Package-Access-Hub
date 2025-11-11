@@ -1,5 +1,13 @@
 # V0.3
 
-* Start by copying from - https://github.com/ARTS-Laboratory/Smart-Penetrometer-with-Edge-Computing-and-Intelligent-Embedded-Systems/tree/main/SYS_DEV/Columbia/V0/V0.6/V0.6.2/base_station
+PCB view-
+<div class="side-by-side-container">
+  <figure>
+    <img src="media/pcb_top.png" alt="PCB top" width="40%">
+  </figure>     
+  <figure>
+    <img src="media/pcb_bottom.png" alt="PCB bottom" width="40%">
+  </figure>
+</div>
 * Reference from - https://github.com/ARTS-Laboratory/IoT-Water-Level-Sensor
 
